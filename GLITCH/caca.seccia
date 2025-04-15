@@ -1,0 +1,875 @@
+{
+"general": {
+"version": "15"
+},
+"project": {
+"game": {
+"name": "caca",
+"version": "1.0.0",
+"width": "1820",
+"height": "1024",
+"font": "Cartoon",
+"lightAmbient": "255",
+"balloonImageMargin": "10,10,63,33",
+"balloonTextMargin": "10,10,11,36",
+"choiceMargin": "10,150,10,10",
+"scripts": {
+"init": "// this script is called when a new game is started or when a previous game is loaded\r\n// you can set here your variables that will be initialized even for old savegames"
+},
+"languages": {
+"english": "1",
+"os": "1",
+"native": "English",
+"default": "English"
+},
+"builds": [
+{
+"platform": "WINDOWS",
+"name": "windows"
+},
+{
+"platform": "WINDOWS",
+"name": "play_windows"
+},
+{
+"platform": "WEB",
+"name": "play_web",
+"distribution": "Local"
+}
+]
+},
+"palette": {
+"Blue": 16744448,
+"Brown": 2121888,
+"Cyan": 15266376,
+"DarkGreen": 32768,
+"Gold": 2138336,
+"Gray": 10398381,
+"Green": 5760599,
+"Magenta": 15357406,
+"Maroon": 160,
+"Orange": 33023,
+"Pink": 12632319,
+"Purple": 9519498,
+"Red": 3937500,
+"Silver": 12632256,
+"Yellow": 6356991,
+"White": 16777215
+},
+"layout": {
+"autosave": {
+"active": true,
+"width": 128,
+"height": 128
+},
+"bag": {
+"active": true,
+"x": 1688,
+"width": 128,
+"height": 128,
+"horz": 2,
+"rclick": true
+},
+"detach": {
+"y": 128,
+"width": 128,
+"height": 128,
+"horz": 2,
+"bag": "Enabled"
+},
+"items": {
+"active": true,
+"y": 880,
+"width": 1820,
+"height": 128,
+"horz": 3,
+"vert": 2,
+"bag": "Enabled"
+},
+"legend": {
+"active": true,
+"x": 160,
+"y": 16,
+"width": 1500,
+"height": 32,
+"horz": 3,
+"align": "Top"
+},
+"magnify": {
+"active": true,
+"width": 400,
+"height": 400,
+"zoom": 200
+},
+"menu": {
+"active": true,
+"x": 1688,
+"y": 128,
+"width": 128,
+"height": 128,
+"horz": 2,
+"bag": "Enabled"
+},
+"players": {
+"x": 1688,
+"y": 256,
+"width": 128,
+"height": 512,
+"vert": 3,
+"bag": "Enabled"
+},
+"shutup": {
+"active": true,
+"x": 1688,
+"width": 128,
+"height": 128,
+"horz": 2
+}
+}
+},
+"scenario": {
+"board": {
+"nextid": 100,
+"x": -160,
+"sections": [
+{
+"name": "Start",
+"width": 128,
+"diagram": {
+"board": {
+"nextid": 1
+}
+}
+},
+{
+"name": "Map",
+"width": 256,
+"diagram": {
+"board": {
+"nextid": 1
+}
+}
+},
+{
+"name": "Game",
+"width": 2048,
+"diagram": {
+"board": {
+"nextid": 1
+}
+}
+}
+],
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"name": "start",
+"x": 40,
+"y": 240,
+"plugs": [
+{
+"id": 2,
+"type": 3,
+"trgs": [
+9
+]
+}
+],
+"exit": "// Assign an object to the player\r\ncontrol P_HERO O_HERO\r\n\r\n// Change the current player\r\nswitch P_HERO\r\n\r\n// Change the current scene\r\njump S_HOME"
+},
+{
+"type": 256,
+"id": 8,
+"name": "#Windows",
+"x": 216,
+"y": 240,
+"plugs": [
+{
+"id": 9,
+"type": 2
+},
+{
+"id": 10,
+"type": 3,
+"trgs": [
+33,
+39,
+48
+]
+}
+]
+},
+{
+"type": 258,
+"id": 32,
+"name": "#Internet",
+"x": 1112,
+"y": 240,
+"plugs": [
+{
+"id": 33,
+"type": 2
+},
+{
+"id": 34,
+"type": 3,
+"trgs": [
+54
+]
+}
+]
+},
+{
+"type": 262,
+"id": 35,
+"name": "#Internet",
+"x": 1512,
+"y": 240,
+"plugs": [
+{
+"id": 36,
+"type": 2
+},
+{
+"id": 37,
+"type": 3,
+"trgs": [
+72
+]
+}
+]
+},
+{
+"type": 258,
+"id": 38,
+"name": "#Fichiers",
+"x": 408,
+"y": 184,
+"plugs": [
+{
+"id": 39,
+"type": 2
+},
+{
+"id": 40,
+"type": 3,
+"trgs": [
+60
+]
+}
+]
+},
+{
+"type": 262,
+"id": 41,
+"name": "#Fichiers",
+"x": 1024,
+"y": 184,
+"plugs": [
+{
+"id": 42,
+"type": 2
+},
+{
+"id": 43,
+"type": 3,
+"trgs": [
+33,
+72
+]
+}
+]
+},
+{
+"type": 258,
+"id": 47,
+"name": "#Poubelle",
+"x": 408,
+"y": 320,
+"plugs": [
+{
+"id": 48,
+"type": 2
+},
+{
+"id": 49,
+"type": 3,
+"trgs": [
+63
+]
+}
+]
+},
+{
+"type": 262,
+"id": 50,
+"name": "#Poubelle",
+"x": 896,
+"y": 320,
+"plugs": [
+{
+"id": 51,
+"type": 2
+},
+{
+"id": 52,
+"type": 3,
+"trgs": [
+33,
+81
+]
+}
+]
+},
+{
+"type": 256,
+"id": 53,
+"name": "#cine_erreur_reseau",
+"x": 1208,
+"y": 240,
+"plugs": [
+{
+"id": 54,
+"type": 2
+},
+{
+"id": 55,
+"type": 3,
+"trgs": [
+57
+]
+}
+]
+},
+{
+"type": 256,
+"id": 56,
+"name": "#enigme_labyrinthe",
+"x": 1360,
+"y": 240,
+"plugs": [
+{
+"id": 57,
+"type": 2
+},
+{
+"id": 58,
+"type": 3,
+"trgs": [
+36
+]
+}
+]
+},
+{
+"type": 256,
+"id": 59,
+"name": "#cine_masquage_fichiers",
+"x": 496,
+"y": 184,
+"plugs": [
+{
+"id": 60,
+"type": 2
+},
+{
+"id": 61,
+"type": 3,
+"trgs": [
+66
+]
+}
+]
+},
+{
+"type": 256,
+"id": 62,
+"name": "#cine_suppression_fichier",
+"x": 504,
+"y": 320,
+"plugs": [
+{
+"id": 63,
+"type": 2
+},
+{
+"id": 64,
+"type": 3,
+"trgs": [
+78
+]
+}
+]
+},
+{
+"type": 256,
+"id": 65,
+"name": "#retrouver_fichier_cache",
+"x": 672,
+"y": 184,
+"plugs": [
+{
+"id": 66,
+"type": 2
+},
+{
+"id": 67,
+"type": 3,
+"trgs": [
+69
+]
+}
+]
+},
+{
+"type": 256,
+"id": 68,
+"name": "#aborescence_fractale",
+"x": 840,
+"y": 184,
+"plugs": [
+{
+"id": 69,
+"type": 2
+},
+{
+"id": 70,
+"type": 3,
+"trgs": [
+42
+]
+}
+]
+},
+{
+"type": 258,
+"id": 71,
+"name": "#Debug",
+"x": 1696,
+"y": 184,
+"plugs": [
+{
+"id": 72,
+"type": 2
+},
+{
+"id": 73,
+"type": 3
+}
+]
+},
+{
+"type": 262,
+"id": 74,
+"name": "#Debug",
+"x": 1960,
+"y": 184,
+"plugs": [
+{
+"id": 75,
+"type": 2
+},
+{
+"id": 76,
+"type": 3
+}
+]
+},
+{
+"type": 256,
+"id": 77,
+"name": "#trier_les_fichiers_supprimer",
+"x": 680,
+"y": 320,
+"plugs": [
+{
+"id": 78,
+"type": 2
+},
+{
+"id": 79,
+"type": 3,
+"trgs": [
+51
+]
+}
+]
+},
+{
+"type": 258,
+"id": 80,
+"name": "#Shell",
+"x": 1048,
+"y": 344,
+"plugs": [
+{
+"id": 81,
+"type": 2
+},
+{
+"id": 82,
+"type": 3,
+"trgs": [
+87
+]
+}
+]
+},
+{
+"type": 262,
+"id": 83,
+"name": "#Shell",
+"x": 1520,
+"y": 344,
+"plugs": [
+{
+"id": 84,
+"type": 2
+},
+{
+"id": 85,
+"type": 3,
+"trgs": [
+72
+]
+}
+]
+},
+{
+"type": 256,
+"id": 86,
+"name": "#cine_discussion_maxXshell",
+"x": 1136,
+"y": 344,
+"plugs": [
+{
+"id": 87,
+"type": 2
+},
+{
+"id": 88,
+"type": 3,
+"trgs": [
+95,
+92
+]
+}
+]
+},
+{
+"type": 260,
+"id": 89,
+"name": "end",
+"x": 1672,
+"y": 416,
+"plugs": [
+{
+"id": 90,
+"type": 2
+}
+]
+},
+{
+"type": 256,
+"id": 91,
+"name": "#lui_faire_confiance",
+"x": 1344,
+"y": 344,
+"plugs": [
+{
+"id": 92,
+"type": 2
+},
+{
+"id": 93,
+"type": 3,
+"trgs": [
+84
+]
+}
+]
+},
+{
+"type": 256,
+"id": 94,
+"name": "#ne_pas_lui_faire_confiance",
+"x": 1312,
+"y": 416,
+"plugs": [
+{
+"id": 95,
+"type": 2
+},
+{
+"id": 96,
+"type": 3,
+"trgs": [
+98
+]
+}
+]
+},
+{
+"type": 256,
+"id": 97,
+"name": "#cine_corruption_totale",
+"x": 1504,
+"y": 416,
+"plugs": [
+{
+"id": 98,
+"type": 2
+},
+{
+"id": 99,
+"type": 3,
+"trgs": [
+90
+]
+}
+]
+}
+]
+}
+},
+"roles": [
+{
+"sid": 2,
+"uid": "R_HOME",
+"graph": {
+"board": {
+"nextid": 3,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"plugs": [
+{
+"id": 2,
+"type": 3
+}
+]
+}
+]
+}
+}
+}
+],
+"scenes": [
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"nextID": 2,
+"role": "R_HOME"
+},
+"objects": [
+{
+"uid": "O_HERO",
+"id": 1,
+"x": 910,
+"y": 512,
+"parallax": 100,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1
+}
+],
+"sid": 1,
+"uid": "S_HOME"
+}
+],
+"objects": [
+{
+"object": {
+"bbox": true,
+"maxScale": 100
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 3,
+"uid": "O_HERO"
+}
+],
+"players": [
+{
+"sid": 4,
+"uid": "P_HERO",
+"player": {
+"scrollSmooth": 50,
+"zoomSmooth": 50,
+"pathColor": -1
+}
+}
+],
+"meta": {
+"nextAssetID": 5
+}
+}

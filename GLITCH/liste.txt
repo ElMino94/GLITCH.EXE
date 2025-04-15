@@ -1,0 +1,6 @@
+
+
+- faire un menu : - play
+		  - exit
+
+- faire un système d'inventaire ( presse papier ) : - code 
