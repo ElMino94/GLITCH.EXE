@@ -130,7 +130,7 @@
 "scenario": {
 "board": {
 "nextid": 100,
-"x": -160,
+"x": -672,
 "sections": [
 {
 "name": "Start",
@@ -639,6 +639,72 @@
 "uid": "R_HOME",
 "graph": {
 "board": {
+"nextid": 22,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"plugs": [
+{
+"id": 2,
+"type": 3
+}
+]
+},
+{
+"type": 1285,
+"id": 3,
+"x": 211,
+"y": 164,
+"plugs": [
+{
+"id": 4,
+"type": 3
+}
+],
+"varCmp": "==",
+"scene": "S_HOME",
+"label": "LABEL"
+},
+{
+"type": 1285,
+"id": 18,
+"x": 213,
+"y": 245,
+"plugs": [
+{
+"id": 19,
+"type": 3,
+"trgs": [
+21
+]
+}
+],
+"varCmp": "==",
+"scene": "S_HOME",
+"label": "LABEL2"
+},
+{
+"type": 258,
+"id": 20,
+"x": 335,
+"y": 246,
+"plugs": [
+{
+"id": 21,
+"type": 2
+}
+]
+}
+]
+}
+}
+},
+{
+"sid": 13,
+"uid": "R_STUDIO",
+"graph": {
+"board": {
 "nextid": 3,
 "boxes": [
 {
@@ -730,31 +796,201 @@
 "opacitySpeed": 100
 }
 },
-"nextID": 2,
-"role": "R_HOME"
+"nextID": 6,
+"role": "R_HOME",
+"zoom": 50,
+"x": -296,
+"y": -147
+},
+"sid": 1,
+"uid": "S_HOME",
+"labels": [
+{
+"name": "LABEL",
+"id": 4,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 337,
+"y": 358,
+"width": 321,
+"height": 155
+},
+{
+"name": "LABEL2",
+"id": 5,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 334,
+"y": 572,
+"width": 320,
+"height": 148
+}
+]
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 20,
+"nextID": 4,
+"x": -298,
+"y": 31
 },
 "objects": [
 {
-"uid": "O_HERO",
+"uid": "O_MAXIME",
 "id": 1,
-"x": 910,
-"y": 512,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 219,
+"y": 352,
 "parallax": 100,
 "lightAmbient": 255,
 "lightDiffuse": 16777215,
 "lightAngle": 30,
-"lightDist": -1
+"lightDist": -1,
+"grids": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
 }
 ],
-"sid": 1,
-"uid": "S_HOME"
+"labels": [
+{
+"name": "ORDI",
+"id": 2,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 855,
+"y": 379,
+"width": 330,
+"height": 232
+},
+{
+"name": "SOUS_LE_LIT",
+"id": 3,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 1385,
+"y": 877,
+"width": 440,
+"height": 100
+}
+],
+"sid": 12,
+"uid": "S_STUDIO"
 }
 ],
 "objects": [
 {
 "object": {
 "bbox": true,
-"maxScale": 100
+"maxScale": -1
 },
 "anims": [
 {
@@ -854,8 +1090,144 @@
 ]
 }
 ],
-"sid": 3,
-"uid": "O_HERO"
+"sid": 9,
+"uid": "O_ORDI"
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1,
+"width": 236,
+"height": 668
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"count": 1,
+"frames": [
+{
+"md5": "d02557100df93d9d84569e9a748aa98f",
+"wtrim": 236,
+"htrim": 668,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 240,
+"hdraw": 672
+}
+]
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 10,
+"uid": "O_MAXIME",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 236,
+"h": 668
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
 }
 ],
 "players": [
@@ -870,6 +1242,6 @@
 }
 ],
 "meta": {
-"nextAssetID": 5
+"nextAssetID": 14
 }
 }
